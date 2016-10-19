@@ -27,7 +27,11 @@ class Application extends ParentApplication
      */
     protected function getDefaultCommands()
     {
-        return array(new HelpCommand(), new Command\ListCommand());
+      return array(
+        new HelpCommand(),
+        new Command\ListCommand(),
+        new \Stecman\Component\Symfony\Console\BashCompletion\CompletionCommand()
+      );
     }
 
     /**
