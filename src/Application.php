@@ -61,6 +61,7 @@ class Application extends ParentApplication
         $commands[] = new Command\Project\BehatCommand();
         $commands[] = new Command\Providers\PlatformshProviderCommand();
         $commands[] = new Command\Providers\Commerce2xProviderCommand();
+        $commands[] = new Command\Providers\DrupalProviderCommand();
         return $commands;
     }
 
