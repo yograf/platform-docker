@@ -15,8 +15,7 @@ Currently support is focused at Drupal 7 and Drupal 8. However there is rudiment
 composer global require hirak/prestissimo:^0.3
 
 ## Installation
-sudo apt-get install dnsmasq
-add address=/platform/127.0.0.1 to /etc/dnsmasq.conf
+
 
 First, if you do not have Docker then head over to their [documentation](https://docs.docker.com/) and see how to install for your machine.
 For OSX and Windows users, make sure you have [Virtual Box](https://www.virtualbox.org/wiki/Downloads) installed and docker-machine configured, follow [these instructions](https://docs.docker.com/machine/get-started/#/create-a-machine) for the later and ensure you have
@@ -36,9 +35,9 @@ Use within any directory. Until the app itself can scaffold a folder, it's expec
 * /tests (default directory it will look for Behat tests, however checks shared and www)
 
 Sites are provisioned at *project-name*.platform. Currently the tld is not configurable (#24). It's best to set up dnsmasq set up wildcard DNS entries to point \*.platform to your localhost or Docker VM (Mac, Windows.) Here's some tutorials
-# Ubuntu
-sudo apt-get install dnsmasq
-edit /etc/dnsma
+## Ubuntu
+- sudo apt-get install dnsmasq
+- Add address=/platform/127.0.0.1 to /etc/dnsmasq.conf
 
 
 * http://passingcuriosity.com/2013/dnsmasq-dev-osx/
