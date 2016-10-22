@@ -11,7 +11,12 @@ Currently support is focused at Drupal 7 and Drupal 8. However there is rudiment
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/)
 
+## Optional
+composer global require hirak/prestissimo:^0.3
+
 ## Installation
+sudo apt-get install dnsmasq
+add address=/platform/127.0.0.1 to /etc/dnsmasq.conf
 
 First, if you do not have Docker then head over to their [documentation](https://docs.docker.com/) and see how to install for your machine.
 For OSX and Windows users, make sure you have [Virtual Box](https://www.virtualbox.org/wiki/Downloads) installed and docker-machine configured, follow [these instructions](https://docs.docker.com/machine/get-started/#/create-a-machine) for the later and ensure you have
@@ -31,6 +36,10 @@ Use within any directory. Until the app itself can scaffold a folder, it's expec
 * /tests (default directory it will look for Behat tests, however checks shared and www)
 
 Sites are provisioned at *project-name*.platform. Currently the tld is not configurable (#24). It's best to set up dnsmasq set up wildcard DNS entries to point \*.platform to your localhost or Docker VM (Mac, Windows.) Here's some tutorials
+# Ubuntu
+sudo apt-get install dnsmasq
+edit /etc/dnsma
+
 
 * http://passingcuriosity.com/2013/dnsmasq-dev-osx/
 * http://www.dickson.me.uk/2012/03/26/setting-up-dnsmasq-with-ubuntu-10-04-for-home-networking/
@@ -65,6 +74,7 @@ Searches for behat.yml files, laucnches a Selenium (Firefox) container and execu
 
 ````
 Available commands:
+  _completion                        BASH completion hook.
   drush                              Runs a Drush command for environment.
   help                               Displays help for a command
   init                               Setup Platform and Docker Compose files
@@ -73,9 +83,9 @@ Available commands:
  docker
   docker:logs                        Tails the logs of a specific service container
   docker:proxy (proxy)               Starts the nginx proxy container
-  docker:rebuild                     Rebuild configurations and containers
+  docker:rebuild (rebuild)           Rebuild configurations and containers
   docker:restart (reboot)            Restarts the docker containers
-  docker:ssh                         Allows for quick SSH into a service container.
+  docker:ssh (ssh)                   Allows for quick SSH into a service container.
   docker:stop (stop)                 Stops the docker containers
   docker:up (start)                  Starts the docker containers
  flamegraph
@@ -86,5 +96,6 @@ Available commands:
   project:behat (behat)              Runs behat test suite for project. Checks ./tests, ./www, ./shared and ./repository by default.
   project:db-sync                    Syncs database from environment to local
  provider
+  provider:commerce2x (commerce2x)   Sets up a Drupal Commerce 2.x project
+  provider:drupal (drupal)           Sets up a Drupal composer project project
   provider:platformsh (platformsh)   Sets up a Platform.sh project
-````
