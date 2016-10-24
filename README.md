@@ -24,6 +24,13 @@ ran `docker-machine create --driver virtualbox default`.
 ````
 composer global require mglaman/platform-docker
 ````
+## Troubleshooting (incl. composer and console problems)
+### drupal module:install -> InvalidArgumentException: The file "/home/y/projects/website/web//vendor/drupal/console-core
+Remove mpty web/composer.json.
+### composer require drupal/external_entities:8.1.x-dev -> Your requirements could not be resolved to an installable set of packages.
+try 'composer require drupal/external_entities:1.x-dev' format.
+
+
 
 ## Usage
 
