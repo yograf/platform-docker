@@ -12,7 +12,7 @@ Currently support is focused at Drupal 7 and Drupal 8. However there is rudiment
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ## Optional
-composer global require hirak/prestissimo:^0.3
+composer global require "hirak/prestissimo:^0.3"
 
 ## Installation
 
