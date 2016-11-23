@@ -34,6 +34,13 @@ try 'composer require drupal/external_entities:1.x-dev' format.
 
 ## Usage
 
+todo: install global console on phpfpm docker container.
+curl https://drupalconsole.com/installer -L -o drupal.phar
+mv drupal.phar /usr/local/bin/drupal
+chmod +x /usr/local/bin/drupal
+
+add docker-compose exec phpfpm drupal --root=/var/platform/web [command]
+
 Use within any directory. Until the app itself can scaffold a folder, it's expecting a folder structure of
 
 * /shared (if not present it will be made)
